@@ -73,3 +73,26 @@ The row numbers are the *Index*.
 - `.to_csv(path, index=False)` saves the DataFrame as a CSV file, and `index=False` leaves the row numbers out.
 
 The quartiles are the values a quarter, half and three quarters of the way up when the values are sorted. The middle one is the median.
+
+## Choose your dataset
+Choose your dataset, and weite your question in one sentence in README.md. Nothing is fraded in this module, but the rest of the course goes faster when you know what you will use.
+
+### Three places to look for a dataset of your own:
+- https://www.kaggle.com/datasets : thousands of datasets on almost anything. Needs a free account.
+- https://archive.ics.uci.edu/ : classic machine learning datasets.
+- https://www.dataportal.se/ : open data from swedish public authorities.
+
+### Not sure? Start with one of these
+Both work for the project, and you can download them for free with an account:
+- https://allisonhorst.github.io/palmerpenguins/ : 344 rows. You can predict the spieces of a penguin from its bill, flippers and weight. Has a CCO license (free to use).
+- https://archive.ics.uci.edu/dataset/186/wine+quality : 1,599 rows. You can predict the quality score of a wine, from its chemistry. CC BY 4.0 license (name the source)
+
+The *wine quality* file separates its columns with `;` so read it with `sep=";"`, as in *read a file the way it is writen*
+
+### What makes a Dataset work
+To predict is to guess a column's value, such as a price, from the other columns. A dataset works when:
+- It has a *column you can predict*, a number or a category, and some columns that can explain it.
+- It has at least a few hundred rows.
+- It has columns *you understand*, so that you can tell wheter a value is reasonable.
+- It *may be used*: read the license, and write the source in your `README.md`.
+- It holds *no personal data*: no names, personal identity numbers or addresses.
