@@ -1,4 +1,4 @@
-# Read the data
+# Data exploration
 
 ## The five files downloaded for this module (in practice/data)
 - *apartments.csv* is 443 apartments for sale.
@@ -54,3 +54,22 @@ The path is worked out from the script's own location, so you get the same resul
 Two things to know:
 1. \ isn't division here. When there's a Path object on the left, \ means "join paths". It works on Windows, Mac and Linux, so you don't have to worry about \ vs /.
 2. `__file__` doesn't exist in Jupyter notebooks. There you get a *NameError*. The pattern only works in regular .py files that you run with `python file.py`
+
+## A table in Python
+Think of a spreadsheet: a row of column names at the top, then one row per aoartment. You can sum a whole column, or sort the sheet, without touching each cell by hand.
+
+The pandas package gives Python the same thing. In module 02 the apartments were a list of dictionaries, and every question needed a loop.
+
+The pandas package reads a file into a DataFrame, a table like that sheet where one line of code works on a whole column at once.
+
+A *DataFrame* is a table: named columns, and numbered rows. One column on its own is a *Series*: the values, with the row numbers beside them. 
+The row numbers are the *Index*.
+
+## The method you will use most
+- `.head()` the first five rows.
+- `.info()` each column's type, and how many values it has.
+- `.describe()` count, mean, min, max and quartiles of every number column.
+- `df["tram"].value_counts()` how many times each value occurs (swap df for your *DataFrame* and *tram* for any column name).
+- `.to_csv(path, index=False)` saves the DataFrame as a CSV file, and `index=False` leaves the row numbers out.
+
+The quartiles are the values a quarter, half and three quarters of the way up when the values are sorted. The middle one is the median.
